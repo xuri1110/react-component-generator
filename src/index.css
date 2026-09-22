@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  color-scheme: dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+
+  /* workbench */
+  --workbench: #0d0b08;
+  --workbench-line: rgba(255, 176, 0, 0.05);
+
+  /* chassis (beige plastic) */
+  --case: #d9cdb2;
+  --case-deep: #b6a888;
+  --case-highlight: #f1e8d4;
+
+  /* text on chassis */
+  --ink: #241b10;
+  --ink-soft: #5c4d34;
+
+  /* CRT screens */
+  --screen: #171309;
+  --screen-edge: #030201;
+  --paper: #f4efe1;
+
+  /* phosphor + signal LEDs */
+  --phosphor: #ffb000;
+  --phosphor-dim: #c98600;
+  --phosphor-soft: rgba(255, 176, 0, 0.14);
+  --signal-green: #3ddc71;
+  --signal-red: #ff5a46;
+
+  --font-display: 'VT323', ui-monospace, monospace;
+  --font-mono:
+    'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+}
+
+body {
+  font-family: var(--font-mono);
+  background:
+    radial-gradient(ellipse 900px 500px at 50% -10%, rgba(255, 176, 0, 0.06), transparent),
+    repeating-linear-gradient(
+      0deg,
+      var(--workbench-line) 0px,
+      var(--workbench-line) 1px,
+      transparent 1px,
+      transparent 3px
+    ),
+    var(--workbench);
+  color: var(--ink);
+  min-height: 100vh;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: var(--phosphor);
+  color: var(--screen-edge);
+}
