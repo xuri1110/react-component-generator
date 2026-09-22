@@ -376,6 +376,12 @@
   color: var(--phosphor-dim);
 }
 
+.prompt-length-error {
+  margin-top: 8px;
+  color: var(--signal-red);
+  font-size: 0.85rem;
+}
+
 .btn-generate {
   height: 52px;
   padding: 0 22px;
